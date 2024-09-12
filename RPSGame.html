@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RPSGame.css">
+    <title>RPSGame</title>
+    <link rel="shortcut icon" href="./Resources/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="icons">
+        <button onclick="
+        usermove='Rock';  
+        generateComputerMove();
+        evaluateMoves();
+        console.log(gameHistory);
+        renderGameSummary();
+        renderGameHistory()">
+        
+            <img src="./Resources/rock.png" alt="rock icon" id="Icon"></button>
+        <!-- <p> Rock </p> -->
+        <button onclick="usermove='Paper'; 
+        generateComputerMove(); 
+        evaluateMoves();
+        renderGameSummary();">
+            <img src="./Resources/paper.png" alt="paper icon" id="Icon"></button>
+        <!-- <p> Paper </p> -->
+        <button onclick="usermove='Scissors'; 
+        generateComputerMove(); 
+        evaluateMoves();
+        renderGameSummary();">
+            <img src="./Resources/scissors.png" alt="scissors icon" id="Icon"></button>
+        <!-- <p>Scissors</p> -->
+        <button onclick="resetGame()"><img src="./Resources/reset.jpg" alt="Reset" srcset="" id="resetIcon"></button>
+
+    </div>
+    <br><br><br><br>
+    <div class="gsum">
+        <h1>Game Summary</h1>
+        <br>
+        <table>
+            <tr>
+                <th>Win</th>
+                <th>Loss</th>
+                <th>Draw</th>
+                <th>Games Played</th>
+                
+            </tr>
+            <tr>
+                <td id="wins">0</td>
+                <td id="loses">0</td>
+                <td id="ties">0</td>
+                <td id="gp">0</td>
+            </tr>
+
+        </table>
+    </div>
+    <br><br><br><br>
+     <h1>Game History</h1>
+     <table id="his">
+        <tr>
+            <th>#</th>
+            <th>User Move</th>
+            <th>Computer Move</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+     </table>
+
+
+
+
+
+
+
+
+
+ <script src="RPSGame.js"></script>   
+</body>
+</html>
